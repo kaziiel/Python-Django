@@ -1,0 +1,52 @@
+{% extends 'base.html' %}
+{% block titulo %}
+     | Digital Market
+{% endblock %}
+
+{% block contenido %}
+    {% load static %}
+    <!-- Producto -->
+    <div class="view full-page-intro"
+    style="background-image: url('{% static 'assets/img/2.png' %}'); background-repeat: no-repeat; background-size: cover;">
+
+    <!-- Mask & flexbox options-->
+    <div class="mask d-flex justify-content-center align-items-center">
+
+      <!-- Content -->
+      <div class="container">
+
+        <!--Grid row-->
+        <div class="row wow fadeIn">
+
+          <!--Grid column-->
+          <div class="col-md-7 pt-5 mt-5 black-text text-center text-md-left">
+
+            <h1 class="display-5 font-weight-bold indigo-text" name="Producto">{{ tituloIni }}</h1>
+            <p>
+              <strong>{{eslogan}}</strong>
+            </p>
+
+            <p class="mb-4 d-none d-md-block">
+              <strong>{{primerPa}}</strong>
+            </p>
+
+            <a target="_blank" href="" class="btn peach-gradient btn-lg">Ver más
+
+            </a>
+
+          </div>
+          <!--Grid column-->
+
+        </div>
+        <!--Grid row-->
+
+      </div>
+      <!-- Content -->
+
+    </div>
+    <!-- Mask & flexbox options-->
+
+  </div>
+  <!-- Producto -->
+{% endblock %}
+

@@ -1,0 +1,134 @@
+{% extends 'base.html' %}
+
+{% block contactenos %}
+    {% load static %}
+
+    <!--Grid column-->
+  <div class="col-lg-9 mr-auto ml-auto">
+
+    <!-- Card -->
+    <div class="card mb-3 mt-5">
+      <div class="card-body">
+          <!--Section: Content-->
+    <section class="text-center px-md-5 mx-md-5 dark-grey-text">
+
+    <!-- Section heading -->
+    <h3 class="font-weight-bold mb-3 mt-5 indigo-text">Contáctanos</h3>
+    <!-- Section description -->
+    <p class="text-center w-responsive mx-auto mb-3">Queremos que te pongas en contacto con nosotros para compartir tus comentarios, opiniones y necesidades o para recibir una asesoría completa sobre un producto o servicio de tu interés.</p>
+
+    <!-- Grid row -->
+    <div class="row">
+
+        <!-- Grid column -->
+        <div class="col-md-12">
+          <div class="md-form mb-2">
+            <a href="#"><i class="fab fa-facebook fa-2x"></i></a>
+            <a href="#"><i class="fab fa-twitter fa-2x"></i></a>
+            <a href="#"><i class="fab fa-linkedin fa-2x"></i></a>
+            <a href="#"><i class="fab fa-github fa-2x"></i></a>
+          </div>
+        </div>
+        <!-- Grid column -->
+
+      <!-- Grid column -->
+      <div class="col-md-9 mb-md-0 mb-5">
+        <form action="" method="POST">
+          {% csrf_token %}
+          <!-- Grid row -->
+          <div class="row">
+
+            <!-- Grid column -->
+            <div class="col-md-6">
+            <!--Tipo peticion-->
+              <div class="md-form mb-0">
+                {{ formulario.tipomsj }}
+              </div>
+            </div>
+            <!-- Grid column -->
+
+            <!-- Grid column -->
+            <div class="col-md-6">
+              <div class="md-form mb-0">
+                <label class="">Nombre Completo</label>
+                {{ formulario.usuario }}
+              </div>
+            </div>
+            <!-- Grid column -->
+          </div>
+          <!-- Grid row -->
+          <!-- Grid row -->
+          <div class="row">
+
+          <!-- Grid column -->
+            <div class="col-md-12">
+              <div class="md-form mb-0">
+                <label class="">Correo Electronico</label>
+                {{ formulario.correo }}
+              </div>
+            </div>
+          <!-- Grid column -->
+          </div>
+          <!-- Grid row -->
+
+          <!-- Grid row -->
+          <div class="row">
+
+            <!-- Grid column -->
+            <div class="col-md-12">
+              <div class="md-form">
+                <label>Mensaje</label>
+                {{ formulario.mensaje }}
+              </div>
+            </div>
+            <!-- Grid column -->
+
+          </div>
+          <!-- Grid row -->
+          <div class="text-center text-md-left">
+              <span class="col-md-10 float-left">
+                {% if 'ok' in request.GET %}
+                  <span class="alert alert-success">Hemos recibido tu mensaje.</span>
+                {% endif %}
+                {% if 'fail' in request.GET %}
+                  <span class="alert alert-danger">No se pudo enviar el mensaje.</span>
+                {% endif %}
+              </span>
+              <button type="submit" name="sndmsj" class="btn btn-primary btn-md btn-rounded peach-gradient col-md-2 float-right" >Enviar</button>
+          </div>
+        </form> 
+
+      </div>
+      <!-- Grid column -->
+
+      <!-- Grid column -->
+      <div class="col-md-3 text-center">
+        <ul class="list-unstyled mb-0">
+          <li>
+            <i class="fas fa-map-marker-alt fa-2x indigo-text"></i>
+            <p>Complejo Norte, Medellín, Antioquia, Carrera 68 #104, CO</p>
+          </li>
+          <li>
+            <i class="fas fa-phone fa-2x mt-4 indigo-text"></i>
+            <p>+54 314 541 58 78</p>
+          </li>
+          <li>
+            <i class="fas fa-envelope fa-2x mt-4 indigo-text"></i>
+            <p class="mb-0">helpdesk@digitalmarket.com</p>
+          </li>
+        </ul>
+      </div>
+      <!-- Grid column -->
+
+    </div>
+    <!-- Grid row -->
+  </section>
+  <!--Section: Content-->
+      </div>
+    </div>
+    <!-- Card -->
+
+  </div>
+  <!--Grid column-->
+
+  {% endblock %}

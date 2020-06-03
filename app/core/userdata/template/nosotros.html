@@ -1,0 +1,103 @@
+{% extends 'base.html' %}
+
+{% block nosotros %}
+    {% load static %}
+    <!--Grid column-->
+  <div class="col-lg-9 mr-auto ml-auto view full-page-intro">
+
+    <!-- Card -->
+    <div class="card mt-5 mb-3">
+      <div class="card-body">
+      <!--Section: Nosotros -->
+      <section>
+
+        <h3 class="h3 text-center mt-5 mb-5 indigo-text">{{ tituloNo }}</h3>
+
+        <!--Grid row-->
+        <div class="row wow fadeIn">
+
+          <!--Grid column-->
+          <div class="col-lg-6 col-md-12 px-4">
+
+            <!--First row-->
+            <div class="row">
+              <div class="col-1 mr-3">
+                <img src="{% static 'assets/img/seb.jpg' %}" class="rounded-circle border-2 border-indigo" width="84" height="94" />
+              </div>
+
+              <div class="col-10 ml-4">
+                <h5 class="feature-title indigo-text">{{ sebnomb }}
+                  <a href="https://github.com/Amonbe8080" target="_blank"><i class="fab fa-github mr-2"></i></a>
+                  <a href="https://www.linkedin.com/in/sebasti%C3%A1n-%C3%A1lvarez-p%C3%A9rez-1b84b6199/"
+                    target="_blank"><i class="fab fa-linkedin"></i></a>
+                </h5>
+                <p class="grey-text ml-2">{{desback}}</p>
+                <p class="grey-text">{{sebcorreo}}</p>
+              </div>
+            </div>
+            <!--/First row-->
+
+            <div style="height:30px"></div>
+
+            <!--Second row-->
+            <div class="row">
+              <div class="col-1 mr-3">
+                <img src="{% static 'assets/img/tom.png' %}" class="rounded-circle border-2 border-indigo" width="84" height="94" />
+              </div>
+              <div class="col-10 ml-4">
+                <h5 class="feature-title indigo-text">{{tomnomb}}
+                  <a href="https://github.com/kaziiel" target="_blank"><i class="fab fa-github mr-2"></i></a>
+                  <a href="https://www.linkedin.com/in/sebasti%C3%A1n-%C3%A1lvarez-p%C3%A9rez-1b84b6199/"
+                    target="_blank"><i class="fab fa-linkedin"></i></a>
+                </h5>
+                <p class="grey-text ml-2">{{desfront}}</p>
+                <p class="grey-text">{{tomcorreo}}</p>
+              </div>
+            </div>
+            <!--/Second row-->
+
+            <div style="height:30px"></div>
+
+            <!--Third row-->
+            <div class="row">
+              <div class="col-1 mr-3">
+                <img src="{% static 'assets/img/kev.png' %}" class="rounded-circle border-2 border-indigo" width="84" height="94" />
+              </div>
+              <div class="col-10 ml-4">
+                <h5 class="feature-title indigo-text">{{kevnomb}}
+                  <a href="https://github.com/kealsugo" target="_blank"><i class="fab fa-github mr-2"></i></a>
+                  <a href="https://www.linkedin.com/in/kevin-suaza-gomez-1115701a7/" target="_blank"><i
+                      class="fab fa-linkedin"></i></a>
+                </h5>
+                <p class="grey-text ml-2">{{desback}}</p>
+                <p class="grey-text">{{kevcorreo}}</p>
+              </div>
+            </div>
+            <!--/Third row-->
+
+          </div>
+          <!--/Grid column-->
+
+          <!--Grid column-->
+          <div class="col-lg-6 col-md-12">
+            <img src="{% static 'assets/img/nosotros.jpg' %}" class="img-fluid z-depth-1-half rounded-circle img-fluid" alt="">
+          </div>
+          <!--/Grid column-->
+
+        </div>
+        <!--/Grid row-->
+      </section>
+      <!--Section: Nosotros-->
+      </div>
+    </div>
+    <!-- Card -->
+  </div>
+  <!--Grid column-->
+
+
+ 
+{% endblock %} 
+
+
+
+
