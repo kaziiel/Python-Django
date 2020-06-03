@@ -15,6 +15,22 @@ class HomePageView(TemplateView):
                                                     'primerPa':'Digital market es un plataforma de ventas para un supermercado acogiendo un diseño acogedor y fácil de usar para el usuario, la plataforma contará con diversas opciones tanto para el usuario y administrador.'})
                                                         
 
+class NosotrosPageView(TemplateView):
+    
+    template_name = "nosotros.html"
+
+    def get(self, request, *args, **kwargs):
+        return render(request, self.template_name,{'tituloNo': '¿Quienes Somos?', 
+                                                    'sebnomb': 'Sebastián Álvarez Pérez',
+                                                    'desback':'Desarrollador Backend',
+                                                    'sebcorreo':'alvarezperezsebastian2014@gmail.com',
+                                                    'tomnomb':'Tomas Díaz Vásquez',
+                                                    'desfront':'Desarrollador Frontend',
+                                                    'tomcorreo':'samot0051@gmail.com',
+                                                    'kevnomb':'Kevin Alexander Suaza Gómez',
+                                                    'kevcorreo':'kealsugo@gmail.com'})
+
+
 
 def contacto(request):
     formContact = ContactForm()
