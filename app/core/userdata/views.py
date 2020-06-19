@@ -1,20 +1,19 @@
-from django.views.generic.base import TemplateView
 from django.shortcuts import render
-from django.urls import reverse
+from django.views.generic.list import ListView 
+from .models import DatosUser
+from django.utils import timezone
 
 
 
-class NosotrosPageView(TemplateView):
-    
+
+
+class NosotrosListView(ListView):
     template_name = "nosotros.html"
+    model = DatosUser
+    paginate_by = 100 #if pagination is desired
 
-    def get(self, request, *args, **kwargs):
-        return render(request, self.template_name,{'tituloNo': '¿Quienes Somos?', 
-                                                    'sebnomb': 'Sebastián Álvarez Pérez',
-                                                    'desback':'Desarrollador Backend',
-                                                    'sebcorreo':'alvarezperezsebastian2014@gmail.com',
-                                                    'tomnomb':'Tomas Díaz Vásquez',
-                                                    'desfront':'Desarrollador Frontend',
-                                                    'tomcorreo':'samot0051@gmail.com',
-                                                    'kevnomb':'Kevin Alexander Suaza Gómez',
-                                                    'kevcorreo':'kealsugo@gmail.com'})
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context["now"] = timezone.now()
+        return context
+    
